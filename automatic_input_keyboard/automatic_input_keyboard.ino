@@ -18,7 +18,7 @@ void loop() {
   DigiKeyboard.sendKeyStroke(0);
 
   if(flag == 0) {
-	flag = 1;
+    flag = 1;
     DigiKeyboard.sendKeyStroke(KEY_DOWN); // Down Key
 
     DigiKeyboard.delay(1000);
