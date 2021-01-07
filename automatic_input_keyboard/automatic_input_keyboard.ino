@@ -9,23 +9,21 @@ void setup() {
   // initialize the digital pin as an output.
   pinMode(0, OUTPUT); //LED on Model B
   pinMode(1, OUTPUT); //LED on Model A  or Pro
-}
 
-static int flag = 0;
+
+  DigiKeyboard.sendKeyStroke(0);
+
+  DigiKeyboard.sendKeyStroke(KEY_DOWN); // Down Key
+
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.println("input text");
+  DigiKeyboard.delay(100);
+  DigiKeyboard.println("input text");
+}
 
 // the loop routine runs over and over again forever:
 void loop() {
   DigiKeyboard.sendKeyStroke(0);
-
-  if(flag == 0) {
-    flag = 1;
-    DigiKeyboard.sendKeyStroke(KEY_DOWN); // Down Key
-
-    DigiKeyboard.delay(1000);
-    DigiKeyboard.println("input text");
-    DigiKeyboard.delay(100);
-    DigiKeyboard.println("input text");
-  }
 
   digitalWrite(0, HIGH);   // turn the LED on (HIGH is the voltage level)
   digitalWrite(1, HIGH);
