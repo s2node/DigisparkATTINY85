@@ -3,6 +3,7 @@
 #include <DigiKeyboard.h>
 
 #define KEY_DOWN  0x51
+#define KEY_TAB   0x2B
 
 // the setup routine runs once when you press reset:
 void setup() {                
@@ -10,15 +11,13 @@ void setup() {
   pinMode(0, OUTPUT); //LED on Model B
   pinMode(1, OUTPUT); //LED on Model A  or Pro
 
-
   DigiKeyboard.sendKeyStroke(0);
 
-  DigiKeyboard.sendKeyStroke(KEY_DOWN); // Down Key
-
-  DigiKeyboard.delay(1000);
-  DigiKeyboard.println("input text");
-  DigiKeyboard.delay(100);
-  DigiKeyboard.println("input text");
+  DigiKeyboard.sendKeyStroke(KEY_DOWN);   // Down Key
+  DigiKeyboard.delay(1000);               // wait for a second
+//  DigiKeyboard.println("input text");   // login ID
+//  DigiKeyboard.sendKeyStroke(KEY_TAB);  // TAB Key
+  DigiKeyboard.println("input text");     // login password
 }
 
 // the loop routine runs over and over again forever:
