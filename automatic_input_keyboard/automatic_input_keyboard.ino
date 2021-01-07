@@ -15,7 +15,7 @@ void setup() {
 
   DigiKeyboard.sendKeyStroke(KEY_DOWN);   // Down Key
   DigiKeyboard.delay(1000);               // wait for a second
-//  DigiKeyboard.println("input text");   // login ID
+//  DigiKeyboard.print("input text");     // login ID
 //  DigiKeyboard.sendKeyStroke(KEY_TAB);  // TAB Key
   DigiKeyboard.println("input text");     // login password
 }
